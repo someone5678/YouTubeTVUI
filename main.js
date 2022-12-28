@@ -20,7 +20,7 @@ async function createWindow() {
       contextIsolation: false,
       devTools: false
     }
-  })
+  });
   const blocker = await ElectronBlocker.fromPrebuiltAdsOnly(
     fetch
   );
@@ -34,9 +34,9 @@ app.whenReady().then(() => {
 
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
-  })
-})
+  });
+});
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit()
-})
+});
