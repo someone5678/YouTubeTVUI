@@ -1,0 +1,30 @@
+{
+  "name": "youtubecouchui",
+  "version": "1.0.0",
+  "description": "Youtube \"for TVs\" UI on an Electron Wrapper",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DaBluLite",
+  "license": "ISC",
+  "dependencies": {
+    "@cliqz/adblocker-electron": "^1.25.1",
+    "@cliqz/adblocker-webextension": "^1.25.1",
+    "arcade-machine": "^6.0.0",
+    "cross-fetch": "^3.1.5",
+    "fetch": "^1.1.0"
+  },
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0"
+  },
+  "build": {
+    "appId": "org.aquafinix.youtubetvui",
+    "win": {
+      "target": "portable",
+      "icon": "./youtube.ico",
+      "publisherName": "DaBluLite"
+    }
+  }
+}
