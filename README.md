@@ -1,5 +1,5 @@
-# YoutubeTVUI
-Youtube's TV/Couch UI for Windows and Linux (Mostly for the Steam Deck)
+# YouTubeTVUI
+YouTube's TV/Couch UI for Windows and Linux (Mostly for the Steam Deck)
 
 ## Installing Modules
 To install the nessecary modules, run:
@@ -14,7 +14,12 @@ npx electron .
 ```
 
 ## Building
-Currently, there is only a Windows Portable build configuration available. To build, run:
+For Windows Portable build, run:
 ```
 npx electron-builder
+```
+
+For Linux AppImage build, run:
+```
+npm run build:linux
 ```

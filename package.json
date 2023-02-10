@@ -1,10 +1,12 @@
 {
   "name": "youtubecouchui",
   "version": "1.0.0",
-  "description": "Youtube \"for TVs\" UI on an Electron Wrapper",
+  "description": "YouTube \"for TVs\" UI on an Electron Wrapper",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:linux",
+    "build:linux": "electron-builder --linux --x64"
   },
   "author": "DaBluLite",
   "license": "ISC",
@@ -20,11 +22,23 @@
     "electron-builder": "^23.6.0"
   },
   "build": {
+    "productName": "YouTube TV",
     "appId": "org.aquafinix.youtubetvui",
+    "artifactName": "YouTubeTVUI.${ext}",
+    "afterPack": "./appimage-fix.js",
+    "directories": {
+      "output": "dists"
+    },
     "win": {
       "target": "portable",
-      "icon": "./youtube.ico",
+      "icon": "./res/youtube.ico",
       "publisherName": "DaBluLite"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "./res/youtube.icns",
+      "category": "Video",
+      "packageCategory": "Video"
     }
   }
 }

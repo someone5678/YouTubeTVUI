@@ -6,8 +6,8 @@ const { readFileSync, writeFileSync } = require('fs');
 
 async function createWindow() {
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1280,
+    height: 800,
     fullscreen: true,
     resizable: false,
     frame: false,
@@ -26,7 +26,7 @@ async function createWindow() {
   );
   blocker.enableBlockingInSession(mainWindow.webContents.session);
 
-  mainWindow.webContents.userAgent = "Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.77 Large Screen Safari/534.24 GoogleTV/092754";
+  mainWindow.webContents.userAgent = "Mozilla/5.0 (PlayStation; PlayStation 4/9.51) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Safari/605.1.15";
   mainWindow.loadURL('http://www.youtube.com/tv/');
 }
 app.whenReady().then(() => {
