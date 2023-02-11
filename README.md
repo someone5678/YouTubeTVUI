@@ -1,5 +1,5 @@
 # YouTubeTVUI
-YouTube's TV/Couch UI for Windows and Linux (Mostly for the Steam Deck)
+Unofficial fork of [DaBluLite](https://github.com/DaBluLite)'s [YouTube TV/Couch UI client](https://github.com/DaBluLite/YoutubeTVUI) for Windows and Linux (Mostly for the Steam Deck)
 
 ## Installing Modules
 To install the nessecary modules, run:
